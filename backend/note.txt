@@ -1,0 +1,3 @@
+npm init --yes
+npm i express nodemon cors
+nodemon

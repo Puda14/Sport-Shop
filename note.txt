@@ -1,0 +1,4 @@
+https://icons.getbootstrap.com
+https://fonts.google.com/specimen/Nunito+Sans?query=Nunito
+https://console.cloudinary.com/console
+https://redux.js.org
