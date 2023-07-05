@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {BrowserRouter, Route, Switch, Redirect, Router} from "react-router-dom"
-// import './index.css';
-// import reportWebVitals from './reportWebVitals';
+
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 import productsReducer, { productsFetch } from './features/productsSlice';
 import { productsApi } from './features/productsAPI';
 import cartReducer from "./features/cartSlice";
+import { getTotals } from './features/cartSlice';
 
 const store = configureStore({
   reducer:{
@@ -23,6 +23,7 @@ const store = configureStore({
 });
 
 store.dispatch(productsFetch());
+store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,7 +31,7 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode> 
 );
 
 
