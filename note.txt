@@ -1,4 +1,2 @@
-https://icons.getbootstrap.com
-https://fonts.google.com/specimen/Nunito+Sans?query=Nunito
-https://console.cloudinary.com/console
-https://redux.js.org
+npm install @reduxjs/toolkit react-redux axios
+npm i react-toastify
