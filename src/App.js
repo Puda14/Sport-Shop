@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import "react-toastify/dist/ReactToastify.css";
-import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
+import {BrowserRouter, Route, Routes } from "react-router-dom"
 import { ToastContainer } from "react-toastify";
 // import {Routes} from "react-router";
 import NavBar from './components/NavBar';
@@ -15,12 +15,14 @@ function App() {
       <BrowserRouter>
       <ToastContainer/>
         <NavBar/>
-        <Switch>
-          <Route path = "/Cart" component={Cart}/> 
-          <Route path = "/not-found" component={NotFound}/>
-          <Route path = "/" exact component={Home}/> 
-          <Redirect to = "/not-found"/>
-        </Switch>  
+        <div className="content-container">
+        <Routes>
+          <Route path = "/" exact element={<Home/>}/> 
+          <Route path = "/Cart" element={<Cart/>}/> 
+          <Route path = "/not-found" element={<NotFound/>}/>
+          <Route to= "/not-found"/>
+        </Routes>  
+        </div>
       </BrowserRouter>
     </div>
   );

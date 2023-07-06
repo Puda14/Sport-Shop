@@ -1,2 +1,3 @@
 npm install @reduxjs/toolkit react-redux axios
 npm i react-toastify
+https://chaoocharles.dev/source-codes/react-and-redux-toolkit-full-course-free-complete-shopping-cart-project
