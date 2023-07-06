@@ -2,11 +2,18 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useGetAllProductsQuery } from "../features/productsAPI";
 import { addToCart } from "../features/cartSlice";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-    const {data, error, isLoading} = useGetAllProductsQuery();
+
+    const { items: products, status} = useSelector((state) => state.products);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const {data, error, isLoading} = useGetAllProductsQuery();
+    // console.log("Api", isLoading);
+
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));

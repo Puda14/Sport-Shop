@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { addToCart, decreaseCart, removeFromCart, clearCart, getTotals } from "../features/cartSlice";
 import { useEffect } from "react";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
+    const auth = useSelector((state) => state.auth);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         dispatch(getTotals());
@@ -91,8 +93,18 @@ const Cart = () => {
                             <span className="amount">${cart.cartTotalAmount}</span>
                         </div>
                         <p>Taxes and shipping calculate at checkout</p>
-                        <button>Check out</button>
-                        {/*  */}
+                        {auth._id ? (
+                                <button>Check out</button> 
+                            ) : (
+                                <button 
+                                    className="cart-login" 
+                                    onClick={()=>navigate("/login")}
+                                >
+                                    Login to Check out
+                                </button>
+                            )}
+                       
+                     
                         <div className="continue-shopping">
                         <Link to = "/">
                             <svg 
