@@ -8,6 +8,7 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import CheckoutSuccess from './components/CheckoutSuccess'
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
         <Routes>
           <Route path = "/" exact element={<Home/>}/> 
           <Route path = "/Cart" element={<Cart/>}/> 
+          <Route path = "/checkout-success" element={<CheckoutSuccess/>}/> 
           <Route path = "/Register" element={<Register/>}/> 
           <Route path = "/Login" element={<Login/>}/> 
-          <Route path = "/not-found" element={<NotFound/>}/>
-          <Route to= "/not-found"/>
+          <Route path = "*" element={<NotFound/>}/>
         </Routes>  
         </div>
       </BrowserRouter>

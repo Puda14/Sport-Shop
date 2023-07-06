@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom"
 import { addToCart, decreaseCart, removeFromCart, clearCart, getTotals } from "../features/cartSlice";
 import { useEffect } from "react";
+import PayButton from "./PayButton";
+
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
@@ -94,7 +96,7 @@ const Cart = () => {
                         </div>
                         <p>Taxes and shipping calculate at checkout</p>
                         {auth._id ? (
-                                <button>Check out</button> 
+                                <PayButton cartItems = {cart.cartItems}/>
                             ) : (
                                 <button 
                                     className="cart-login" 

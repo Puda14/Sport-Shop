@@ -48,7 +48,7 @@ const NavBar = () => {
         </nav>  
     );
 };
- //
+
 export default NavBar;
 
 const AuthLinks = styled.div`
