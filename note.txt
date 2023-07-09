@@ -3,3 +3,10 @@ npm i react-toastify
 https://chaoocharles.dev/source-codes/react-and-redux-toolkit-full-course-free-complete-shopping-cart-project
 npm i jwt-decode
 npm i styled-components
+npm install react-icons --save
+npm i recharts
+npm i moment
+https://mui.com/material-ui/react-table/#basic-table
+npm install @mui/material @emotion/react @emotion/styled
+npm i @mui/x-data-grid
+https://mui.com/material-ui/react-dialog/#basic-dialog
