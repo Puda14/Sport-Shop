@@ -77,7 +77,7 @@ export default function OrdersList() {
               Dispactch
             </DispatchBtn>
             <DeliveryBtn onClick={() => handleOrderDeliver(params.row.id)}>
-              Dispactch
+              Deliver
             </DeliveryBtn>
             <View onClick={() => navigate(`/order/${params.row.id}`)}>
               View
