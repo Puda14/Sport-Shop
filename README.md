@@ -3,11 +3,11 @@
 
 - Start time : from the announcement of the exercise in the Sun scholarship program
 
-- Development time: 7 days (although the deadline is 11 days, there is a clash with the JLPT exam schedule)
+- Development time: 7 days (3/7/2023 - 9/7/2023 although the deadline is 11 days, there is a clash with the JLPT exam schedule)
 
 - Reason for development: to practice web programming skills and combine passion for sports, hence the name SportShop
 
-- Role: Full-stack, completely self-made
+- Role: Full-stack
 
 - Technologies used:
 
