@@ -167,3 +167,7 @@ Some information about the features:
 - [table](https://mui.com/material-ui/react-table/#basic-table)
 - [dialog](https://mui.com/material-ui/react-dialog/#basic-dialog)
 - [backend](https://github.com/Puda14/Sport-Shop-Backend)
+
+> [Live Demo](https://sport-shop-96cf4531ead4.herokuapp.com)
+
+To avoid creating too much data, I don't give product data => just look through there are no rows to order, can still register and try login. When I need a demo, I will put the product up for testing
