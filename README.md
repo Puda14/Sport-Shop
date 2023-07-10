@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# Overview
+- Name: SportShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Start time : from the announcement of the exercise in the Sun scholarship program
 
-## Available Scripts
+- Development time: 7 days (although the deadline is 11 days, there is a clash with the JLPT exam schedule)
 
-In the project directory, you can run:
+- Reason for development: to practice web programming skills and combine passion for sports, hence the name SportShop
 
-### `npm start`
+- Role: Full-stack, completely self-made
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Technologies used:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    - Frontend: [Reactjs](https://react.dev), [React-Redux](https://react-redux.js.org), 
+    [React-Dom](https://legacy.reactjs.org/docs/react-dom.html), 
+    [react-toastify](https://www.npmjs.com/package/react-toastify), 
+    [axios](https://www.npmjs.com/package/axios), 
+    [jwt-decode](https://www.npmjs.com/package/jwt-decode)
 
-### `npm test`
+    - Backend: [Nodejs](Node.js), 
+    [MongoDB](https://www.mongodb.com), 
+    [cloudinary](https://cloudinary.com), 
+    [stripe](https://stripe.com/docs/api/checkout/sessions/retrieve), 
+    [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken), 
+    [bcrypt](https://www.npmjs.com/package/bcrypt), 
+    [joi](https://www.npmjs.com/package/joi), 
+    [express](https://www.npmjs.com/package/express), 
+    [moment](https://www.npmjs.com/package/moment)
+# Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Register
+A user registration feature that requires three pieces of data: name, email, and password. If a user tries to create an account using an email that is already associated with an existing account, an error will occur. Similarly, if the password does not meet the required format, an error will be displayed.
 
-### `npm run build`
+![img](./RMImg/Register.png)
+![img](./RMImg/Register_error.png)
+![img](./RMImg/Register_error2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If the user registration process is successful, the account information will be saved in MongoDB.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![img](./RMImg/Register_success.png)
+![img](./RMImg/register_db.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Login
 
-### `npm run eject`
+There are similar functions to the registration process called "Login" where users only need to input their email and password. If the provided email or password is incorrect, an error message will be displayed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![img](./RMImg/login.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Cart
+The Home page displays the products on sale.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![img](./RMImg/product.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User can select Add To Cart to add products to cart.
 
-## Learn More
+![img](./RMImg/cart.png)
+![img](./RMImg/Howmany.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can press the `+` `-` button to increase or decrease the number.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![img](./RMImg/dec.png)
 
-### Code Splitting
+## Checkout
+Click Check out to pay.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![img](./RMImg/checkout.png)
 
-### Analyzing the Bundle Size
+Fill in the payment information. You can choose the shipping option if you choose Next day air, it will cost an additional 15.00 US$ for shipping.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![img](./RMImg/checkout_details.png)
 
-### Making a Progressive Web App
+Check out is successful and the system will delete the existing carts.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![img](./RMImg/checkout_success.png)
 
-### Advanced Configuration
+Check data on MongoDB.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![img](./RMImg/checkout_db.png)
 
-### Deployment
+## Admin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Login with Admin account will have features to control purchases.
 
-### `npm run build` fails to minify
+### Summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### OverView
+Admin can see the sales status of User, Order and Earnings in the last 5 months.
+
+#### Lastest Transcations
+Admin can see the lastest Orders.
+
+#### All Time
+Admin can see the overall User, Product, Order, Earning.
+
+#### Chart
+Admin can observe the sales status in the last 7 days.
+
+![img](./RMImg/Summary.png)
+
+### Products
+
+Admin can view existing products, edit information, create new product, or view products.
+
+- Create product
+![img](./RMImg/create_product.png)
+
+- Success
+![img](./RMImg/create_product_success.png)
+
+- View product
+![img](./RMImg/view_product.png)
+
+- Delete product
+![img](./RMImg/delete_product.png)
+
+### Orders
+In Orders Admin can also use the same features as in products:
+![img](./RMImg/Orders_admin.png)
+
+Admin can click Dispatch to switch pending status to Dispatched or click Deliver to switch to Delivered status
+
+- View
+![img](./RMImg/view_order.png)
+
+### Users
+
+![img](./RMImg/admin_user.png)
+
+Admin can sort by ID, name, email.
+
+- Delete User
+![img](./RMImg/delete_user_byAdmin.png)
+
+- View User
+![img](./RMImg/view_user.png)
+
+# Settings
+
+Make sure you have installed `nodejs`, `npm`, `npx` or `yarn`
+
+![img](./RMImg/makeSure.png)
+
+you can use
+
+```sh
+npm i
+```
+or
+```sh
+yarn
+```
+to pull the libraries used in the project recorded in the log file to your computer
+
+Then, start build website in localhost
+```sh
+npm start
+```
+
+> It's the frontend, read the [backend](https://github.com/Puda14/Sport-Shop-Backend) to better understand the project
+
+Some information about the features:
+- [icon](https://icons.getbootstrap.com)
+- [font](https://fonts.google.com/specimen/Nunito+Sans?query=Nunito)
+- [cloudinary](https://console.cloudinary.com/console)
+- [react-icon](https://react-icons.github.io/react-icons/)
+- [chart](https://recharts.org/en-US/examples)
+- [table](https://mui.com/material-ui/react-table/#basic-table)
+- [dialog](https://mui.com/material-ui/react-dialog/#basic-dialog)
+- [backend](https://github.com/Puda14/Sport-Shop-Backend)
