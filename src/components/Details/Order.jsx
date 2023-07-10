@@ -66,7 +66,6 @@ const Orders = () => {
             </div>
             <div>
               <h3>Shipping Details</h3>
-              {/* wait */}
               <p>Customer: {order.shipping?.name} </p>
               <p>City: {order.shipping?.address.city} </p>
               <p>Email: {order.shipping?.email} </p>
