@@ -170,4 +170,4 @@ Some information about the features:
 
 > [Live Demo](https://sport-shop-96cf4531ead4.herokuapp.com)
 
-To avoid creating too much data, I don't give product data => just look through there are no rows to order, can still register and try login. When I need a demo, I will put the product up for testing
+Register, login and try to check out. If you find any error or want to see the Admin appearance, please contact me by `pdathp14@gmail.com`, thanks.
