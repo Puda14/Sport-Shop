@@ -156,7 +156,7 @@ Then, start build website in localhost
 npm start
 ```
 
-> It's the frontend, read the [backend](https://github.com/Puda14/Sport-Shop-Backend) to better understand the project
+> It's the frontend, read the [backend](https://github.com/Puda14/Sport-Shop-Backend), [video demo](https://drive.google.com/file/d/1kdaWoNs6psmIP9kYSRDtnEFiLYnVhZnR/view?usp=sharing), [Live demo](https://sport-shop-96cf4531ead4.herokuapp.com) to better understand the project
 
 Some information about the features:
 - [icon](https://icons.getbootstrap.com)
